@@ -16,9 +16,13 @@ namespace Car_Adverts_Portal
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/{AdvertController.cs}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            var formatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            formatter.SerializerSettings.ContractResolver =
+                new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
         }
+    }
     }
 }
