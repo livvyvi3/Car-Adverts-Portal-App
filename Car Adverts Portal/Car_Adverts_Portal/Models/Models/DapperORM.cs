@@ -1,11 +1,10 @@
-﻿using Dapper;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Text;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
+using Dapper;
+using System;
 
 namespace Car_Adverts_Portal.Models
 {
@@ -13,7 +12,7 @@ namespace Car_Adverts_Portal.Models
     {
         private static string connectionString = @"Data Source=VONGAI\SQLEXPRESS;Initial Catalog=AdvertsPortal;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        internal static object ReturnList<T>(string v, object p)
+        public static object ReturnList<T>(string v, object p)
         {
             throw new NotImplementedException();
         }

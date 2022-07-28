@@ -52,7 +52,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Condition, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Condition, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Condition, new List<SelectListItem>
+           { new SelectListItem { Text = "SELECT", Value = "1" },
+           new SelectListItem { Text = "Excellent", Value = "2" },
+           new SelectListItem { Text = "Very Good", Value = "3" },
+           new SelectListItem { Text = "Good", Value = "4" },
+           new SelectListItem { Text = "Fair", Value = "5" },})
                 @Html.ValidationMessageFor(model => model.Condition, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -84,7 +89,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Status, new List<SelectListItem>
+           { new SelectListItem { Text = "SELECT", Value = "1" },
+           new SelectListItem { Text = "Published", Value = "2" },
+           new SelectListItem { Text = "Archived", Value = "3" },
+           new SelectListItem { Text = "Draft", Value = "4" }, } )
                 @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
             </div>
         </div>

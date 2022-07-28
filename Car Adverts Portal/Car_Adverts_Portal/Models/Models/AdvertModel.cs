@@ -21,7 +21,7 @@ namespace Car_Adverts_Portal.Models
 
         public decimal Price { get; set; }
 
-        public byte Images { get; set; }
+        public string Images { get; set; }
 
         public int Doors { get; set; }
 

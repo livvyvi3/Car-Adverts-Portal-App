@@ -158,14 +158,13 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Car_Adverts_Portal\Models\DapperORM.cs" />
+    <Compile Include="Car_Adverts_Portal\Models\Models\DapperORM.cs" />
     <Compile Include="Controllers\AdvertController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AdvertModel.cs" />
-    <Compile Include="Models\DapperORMModel.cs" />
+    <Compile Include="Car_Adverts_Portal\Models\Models\AdvertModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
