@@ -7,18 +7,18 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Sales_Portal.Models
+namespace Car_Adverts_Portal.Models
 {
-    public static class DapperORM
+    public static class DapperORMModel
     {
-        private static string connectionString = @"Data Source=VONGAI\SQLEXPRESS;Initial Catalog="Adverts Portal";Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private static string connectionString = @"Data Source=VONGAI\SQLEXPRESS;Initial Catalog=AdvertsPortal;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         internal static object ReturnList<T>(string v, object p)
         {
             throw new NotImplementedException();
         }
 
-        public static void ExecuteWithoutReturn(string procedureName, DynamicParameters param)
+        public static void ExecuteWithoutReturn(string procedureName, DynamicParameters param = null)
         {
             using (SqlConnection sqlConn = new SqlConnection(connectionString))
             {
@@ -27,7 +27,7 @@ namespace Sales_Portal.Models
             }
         }
 
-        public static T ExecuteReturnScalar<T>(string procedureName, DynamicParameters param)
+        public static T ExecuteReturnScalar<T>(string procedureName, DynamicParameters param = null)
         {
             using (SqlConnection sqlConn = new SqlConnection(connectionString))
             {
